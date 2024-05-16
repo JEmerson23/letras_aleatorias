@@ -175,3 +175,15 @@ body {
 .app__button:active {
   transform: rotateZ(50deg);
 }
+
+.app__configBox {
+
+}
+
+.app_config__textBox {
+  
+}
+
+.app__letterInput {
+
+}

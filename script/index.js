@@ -16,7 +16,7 @@ window.addEventListener(
   }
 );
 
-function generate() {
+function generate(from, to) {
   const letters = "abcdefghijklmnopqrstuvwxyz",
   LETTERS_LEN = letters.length;
 
