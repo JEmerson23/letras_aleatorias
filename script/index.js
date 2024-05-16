@@ -13,10 +13,23 @@ window.addEventListener(
         }
       );
     }
-      
   }
 );
 
 function generate() {
-  return "X"
+  const letters = "abcdefghijklmnopqrstuvwxyz",
+  LETTERS_LEN = letters.length;
+
+  let index, letter, BREAKER = 0;
+
+  while(typeof letter !== "string") {
+    index = parseInt(Math.random()*LETTERS_LEN);
+    letter = letters[index];
+
+    if(BREAKER > 999) break;
+
+    BREAKER++;
+  }
+
+  return letter;
 }
