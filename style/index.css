@@ -104,7 +104,7 @@ body {
 }
 
 #m_content {
-
+  background-color: var(--m-content-bg-color);
 }
 
 #m_footer {
@@ -114,7 +114,11 @@ body {
 /*-----APP-----*/
 
 #app {
-
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .app__displayBox {
