@@ -122,8 +122,9 @@ body {
 }
 
 .app__displayBox {
-  width: 48px;
-  height: 48px;
+  --size: 48px;
+  width: var(--size);
+  height: var(--size);
   padding: 1px;
   border-radius: 7px;
   box-sizing: border-box;
