@@ -95,7 +95,12 @@ body {
 }
 
 #m_header .header__contentBox {
+  justify-content: flex-start;
+}
 
+#m_header .m_title {
+  margin: 2px 0 2px 2%;
+  font-size: 1.7em;
 }
 
 #m_content {
