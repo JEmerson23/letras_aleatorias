@@ -125,9 +125,10 @@ body {
   width: 48px;
   height: 48px;
   padding: 1px;
-  border: 2px solid #000;
   border-radius: 7px;
   box-sizing: border-box;
+  background-color: #a013aa;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,15 +136,21 @@ body {
 
 .app__display {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.2em;
+  font-size: 1.7em;
   font-weight: 600;
   text-align: center;
+  overflow: auto;
 }
 
 .app__buttonBox {
-
+  margin-top: 2%;
 }
 
 .app__button {
-
+  --size: 48px;
+  width: var(--size);
+  height: var(--size);
+  background-color: #2ec563;
+  color: #fff2f2;
+  letter-spacing: 1px;
 }
