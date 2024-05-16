@@ -4,6 +4,11 @@
   --page-footer-bg-color: #efefef;
 }
 
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
 .button-clean {
   padding: 2px 3px 2px 3px;
   border: none;
@@ -72,12 +77,24 @@
 /* ESPECÍFICOS */
 
 #m_header, #m_content, #m_footer {
+  margin: 0 auto;
   max-width: 912px;
   width: 100vw;
   padding: 0;
 }
 
 #m_header {
+  margin-bottom: 4px;
+  padding: 2px;
+  background-color: var(--m-header-bg-color);
+  box-shadow: 0 2px 6px #00000033;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  z-index: 999;
+}
+
+#m_header .header__contentBox {
 
 }
 
