@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+body {
+  margin: 0 auto;
+  padding: 16px;
+}
+
+hgroup {
+  text-align: center;
+}
+
+article {
+  text-align: justify;
+}
+
+div ul {
+  text-align: left;
+  list-style: square;
+}
+#criador {
+  color: #adadad;
+  font: italic;
+  font-family: Arial,  Sans-Serif;
+}
+
+.n {
+  color: #343434;
+  background: blue;
+}
+
+.aviso {
+  color: #bc0000;
+}
+
+.aviso::before {
+  content: "⚠️";
+}
+
+.descricao {
+  color: #002028;
+  background: #efefef;
+}

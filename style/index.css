@@ -24,6 +24,7 @@ body {
   text-transform: lowercase;
   text-align: center;
   transition: transform 0.25s, box-shadow 0.25s;
+  user-select: none;
 }
 
 .button-clean:active {
@@ -168,4 +169,9 @@ body {
   background-color: #2ec563;
   color: #fff2f2;
   letter-spacing: 1px;
+  transition: transform 0.25s;
+}
+
+.app__button:active {
+  transform: rotateZ(50deg);
 }
