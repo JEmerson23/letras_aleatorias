@@ -1,12 +1,13 @@
 :root {
   --m-header-bg-color: #fff;
-  --m-content-bg-color: #fbfbfb;
+  --page-bg-color: #fbfbfb;
   --page-footer-bg-color: #efefef;
 }
 
 body {
   margin: 0 auto;
   padding: 0;
+  background-color: var(--page-bg-color);
 }
 
 .button-clean {
@@ -15,6 +16,7 @@ body {
   border-radius: 4px;
   background-color: #eeeeee;
   box-shadow: 1px 2px 5px #00000066;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +61,10 @@ body {
 }
 
 .link-23:hover {
-  border-bottom: 2px solid #3b3b3b;
+  --bd-style: 2px solid #3b3b3b;
+  padding: 0 2px 0 2px;
+  border-left: var(--bd-style);
+  border-right: var(--bd-style);
 }
 
 .m_title {
@@ -84,7 +89,6 @@ body {
 }
 
 #m_header {
-  margin-bottom: 4px;
   padding: 2px;
   background-color: var(--m-header-bg-color);
   box-shadow: 0 2px 6px #00000033;
@@ -104,14 +108,20 @@ body {
 }
 
 #m_content {
-  background-color: var(--m-content-bg-color);
+  margin: 0 auto 0 auto;
 }
 
 #m_footer {
+  box-sizing: border-box;
+  font-size: 0.9em;
   position: fixed;
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
+}
+
+#m_footer .footer__contentBox {
+  margin: 8px auto 4px auto;
 }
 
 /*-----APP-----*/
