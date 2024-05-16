@@ -6,10 +6,15 @@ window.addEventListener(
       $output = document.querySelector("#output_display");
 
     if($generateBtn && $output) {
+      const $inputFirstLetter = 
+        document.getElementById("input_first_letter"),
+      $inputLastLetter = document.getElementById("input_last_letter");
+
       $generateBtn.addEventListener(
         "click", 
         () => {
-          $output.innerText = generate();
+          $output.innerText = 
+            generate($inputFirstLetter.value[0], $inputLastLetter.value[0]);
         }
       );
     }
@@ -17,7 +22,16 @@ window.addEventListener(
 );
 
 function generate(from, to) {
-  const letters = "abcdefghijklmnopqrstuvwxyz",
+  const letters = ((alphabet) => {
+    const i1 = alphabet.indexOf(from),
+    i2 = alphabet.indexOf(to);
+
+    if(i1 != -1 && i2 != -1) {
+      return i1 - i2 < 0 ? alphabet.slice(i1, i2+1) : alphabet.slice(i2, i1+1);
+    } 
+
+    return alphabet;
+  })("abcdefghijklmnopqrstuvwxyz"),
   LETTERS_LEN = letters.length;
 
   let index, letter, BREAKER = 0;
