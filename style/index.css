@@ -71,10 +71,15 @@
 
 /* ESPECÍFICOS */
 
+#m_header, #m_content, #m_footer {
+  max-width: 912px;
+  width: 100vw;
+  padding: 0;
+}
+
 #m_header {
 
 }
-
 
 #m_content {
 
