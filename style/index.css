@@ -131,8 +131,22 @@ body {
   margin: 16px auto 16px auto;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
+}
+
+.app__container0 {
+  margin: 0 10px 0 0;
+  display: inherit;
+  flex-direction: column;
+  gap: 8px 0;
+}
+
+.app__container1 {
+  margin: 0 0 auto 10px;
+  display: inherit;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .app__displayBox {
@@ -177,13 +191,41 @@ body {
 }
 
 .app__configBox {
-
+  margin: 0;
+  padding: 6px 0 2px 0;
+  width: 128px;
+  height: 6.4em;
+  border-radius: 6px;
+  background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .app_config__textBox {
-  
+  width: 100%;
+  margin: 0;
+  padding: 1px;
+  font-size: 1em;
+  text-align: center;
 }
 
 .app__letterInput {
+  width: 2ch;
+  height: 1em;
+  border: none;
+  border-bottom: 1px solid #cacaca;
+  background-color: transparent;
+  color: #3b3b3b;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  transition: border 0.25s;
+}
 
+.app__letterInput:focus {
+  outline: none;
+  border-bottom-color: #000;
 }

@@ -16,26 +16,30 @@
   </header>
   <main id="m_content">
     <section id="app">
-      <div class="app__displayBox">
-        <output id="output_display" class="app__display">
-          _
-        </output>
+      <div class="app__container0">
+        <div class="app__displayBox">
+          <output id="output_display" class="app__display">
+            _
+          </output>
+        </div>
+        <nav class="app__buttonBox">
+          <button id="generate_button" class="button-clean app__button">
+            gerar
+          </button>
+        </nav>
       </div>
-      <nav class="app__buttonBox">
-        <button id="generate_button" class="button-clean app__button">
-          gerar
-        </button>
-      </nav>
-      <form class="app__configBox">
-        <span class="app_config__textBox">
-          De 
-          <input type="text" id="input_first_letter" 
-            class="app__letterInput" size="1"> 
-          a 
-          <input type="text" id="input_last_letter" 
-            class="app__letterInput" size="1">
-        </span>
-      </form>
+      <div class="app__container1">
+        <form class="app__configBox">
+          <span class="app_config__textBox">
+            <label for="input_first_letter">De</label>
+            "<input type="text" id="input_first_letter" 
+              class="app__letterInput" size="1">"
+            <label for="input_last_letter">a</label>
+            "<input type="text" id="input_last_letter" 
+              class="app__letterInput" size="1">"
+          </span>
+        </form>
+      </div>
     </section>
   </main>
   <footer id="m_footer" class="page__footer">
