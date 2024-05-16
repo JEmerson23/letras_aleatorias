@@ -114,7 +114,7 @@ body {
 /*-----APP-----*/
 
 #app {
-  margin: 0 auto;
+  margin: 16px auto 16px auto;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -122,11 +122,22 @@ body {
 }
 
 .app__displayBox {
-
+  width: 48px;
+  height: 48px;
+  padding: 1px;
+  border: 2px solid #000;
+  border-radius: 7px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .app__display {
-
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-align: center;
 }
 
 .app__buttonBox {
