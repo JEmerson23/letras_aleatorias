@@ -1,3 +1,9 @@
+:root {
+  --m-header-bg-color: #fff;
+  --m-content-bg-color: #fbfbfb;
+  --page-footer-bg-color: #efefef;
+}
+
 .button-clean {
   padding: 2px 3px 2px 3px;
   border: none;
@@ -60,7 +66,7 @@
 }
 
 .page__footer {
-
+  background-color: var(--page-footer-bg-color);
 }
 
 /* ESPECÍFICOS */
