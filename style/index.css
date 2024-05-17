@@ -217,7 +217,7 @@ body {
   height: 1em;
   border: none;
   border-bottom: 1px solid #cacaca;
-  background-color: transparent;
+  background: transparent;
   color: #3b3b3b;
   font-weight: 600;
   text-align: center;
