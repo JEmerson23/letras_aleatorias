@@ -1,6 +1,7 @@
 window.addEventListener(
   "DOMContentLoaded", 
   () => {
+    // esperar todo o DOM carregar
     const $generateBtn = 
       document.querySelector("#generate_button"),
       $output = document.querySelector("#output_display");
@@ -9,8 +10,6 @@ window.addEventListener(
       const $inputFirstLetter = 
         document.getElementById("input_first_letter"),
       $inputLastLetter = document.getElementById("input_last_letter");
-
-      
 
       $generateBtn.addEventListener(
         "click", $inputFirstLetter && $inputLastLetter ? 
