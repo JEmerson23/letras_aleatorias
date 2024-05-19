@@ -3,8 +3,8 @@
 Foi um mini-projeto que fiz quando comecei a aprender o  
 básico do front-end. Recentemente estou refazendo meus  
 passos, para ver o quanto evolui, decide começar por este.  
-Não foi o meu primeiro projeto mas revendo ele, notei o quão  
-era mal feito.  
+Não foi o meu primeiro projeto, mas revendo ele notei  
+o quão era mal feito.  
 
 No diretório ```_old_version```, você pode encontrar a versão  
 antiga da forma que foi finalizado na época.  
