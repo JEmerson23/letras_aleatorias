@@ -36,15 +36,16 @@ window.addEventListener(
 
 function generate(lettersGroup) {
   // gerar letra aleatória
-  console.log(lettersGroup)
   if(typeof lettersGroup !== "string") {
-    throw new TypeError("esperado uma stringargumento");
+    throw new TypeError("esperado um string argumento");
   }
 
   const LETTERS_LEN = lettersGroup.length;
 
   let index, letter, BREAKER = 0;
   
+  if(LETTERS_LEN === 0) return '_';
+
   do {
     index = parseInt(Math.random()*LETTERS_LEN);
     letter = lettersGroup[index];
