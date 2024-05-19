@@ -32,11 +32,16 @@ nos campos respectivos, por exemplo:
 
 ### Documentação do código
 
-* A função ```generate(from, to)``` retorna uma ```String``` contendo uma  
-letra que pertence a um grupo definido pelos parâmetros ```from``` e ```to```,  
-ambos os argumentos (```String```) devem ser passados para ambos  
-os parâmentros, passa apenas um não terar efeito.  
-  Exemplo:  
-  ```console.log(generate('a', 'c')) // -> alguma letra de 'a' a 'c'```  
-Os parâmetros são opcionais e caso não seja passado nenhum argumento  
-ou apenas um, a função retornará alguma letra do alfabeto latino.
+* A função ```generate(lettersGroup)```, retorna um ```String``` contendo  
+uma letra que pertence ao grupo passado para parâmetro o  
+```lettersGroup``` que deve ser um ```String```.  
+Exemplo:  
+  ```console.log(generate("abc")) //-> alguma letra entre 'a' a 'c'```  
+
+* A função ```splitLetters(start, end)```, retona um ```String``` contendo  
+um grupo de letras que pode ser escolhido através dos argumentos  
+passados para os parãmetros ```start``` e ```end```. Os argumentos devem  
+ser do tipo ```String``` contendo um caractere de "A" a "Z".  
+Quando não passado argumentos ou apenas um, a função retornarà  
+todo o alfabeto latino.  
+Exemplo: ```console.log(splitLetters('a', 'c')) //-> "abc"```

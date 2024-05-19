@@ -14,13 +14,15 @@ window.addEventListener(
       $generateBtn.addEventListener(
         "click", $inputFirstLetter && $inputLastLetter ? 
         () => {
+          console.log($inputFirstLetter.value[0], 
+            $inputLastLetter.value[0])
           $output.innerText = 
-            generate(
+            generate(splitLetters(
               $inputFirstLetter.value[0], 
               $inputLastLetter.value[0]
-            );
+            ));
         } :
-        () => {$output.innerHTML = generate()}
+        () => {$output.innerHTML = generate(splitLetters())}
       );
 
     } else {
@@ -32,27 +34,20 @@ window.addEventListener(
   }
 );
 
-function generate(from, to) {
+function generate(lettersGroup) {
   // gerar letra aleatória
-  const letters = ((alphabet) => {
-    const i1 = alphabet.indexOf(from),
-    i2 = alphabet.indexOf(to);
+  console.log(lettersGroup)
+  if(typeof lettersGroup !== "string") {
+    throw new TypeError("esperado uma stringargumento");
+  }
 
-    if(i1 != -1 && i2 != -1) {
-      return 
-        i1 - i2 < 0 ?
-          alphabet.slice(i1, i2+1) : alphabet.slice(i2, i1+1);
-    } 
-
-    return alphabet;
-  })("abcdefghijklmnopqrstuvwxyz"),
-  LETTERS_LEN = letters.length;
+  const LETTERS_LEN = lettersGroup.length;
 
   let index, letter, BREAKER = 0;
   
   do {
     index = parseInt(Math.random()*LETTERS_LEN);
-    letter = letters[index];
+    letter = lettersGroup[index];
 
     if(generate.__hist__ === letter) {
       letter = null;
@@ -67,4 +62,34 @@ function generate(from, to) {
   } while(typeof letter !== "string");
 
   return letter;
+}
+
+function splitLetters(start, end) {
+  // retornar grupo de letras de start até end
+  if(
+    (typeof start !== "string" && start != undefined) || 
+    (typeof end !== "string" && end != undefined)
+  ) {
+    throw new TypeError("esperado apenas strings como argumentos");
+  }
+
+  const alphabet = "abcdefghijklmnopqrstuvwxyz",
+  alphabetRE = /[a-z]/;
+
+  if(
+    (alphabetRE.test(start) && alphabetRE.test(end)) && 
+    (start != undefined && end != undefined)
+  ) {
+    const i1 = alphabet.indexOf(start.toLowerCase()),
+    i2 = alphabet.indexOf(end.toLowerCase());
+
+    if(i1 != -1 && i2 != -1) {
+      return (
+        i1 - i2 < 0 ?
+          alphabet.slice(i1, i2+1) : alphabet.slice(i2, i1+1)
+      );
+    }
+  }
+
+  return alphabet;
 }
